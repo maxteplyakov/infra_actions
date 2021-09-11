@@ -56,9 +56,9 @@ jobs:
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          key: ${{ secrets.SSH_KEY }}
+          host: ${{ secrets.YA_HOST }}
+          username: ${{ secrets.YA_USER }}
+          key: ${{ secrets.SSH_YA_SERVER_KEY }}
           script: |
             # Выполняет pull образа с DockerHub
             sudo docker pull maxteplyakov/infra_action
